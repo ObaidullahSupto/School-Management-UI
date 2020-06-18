@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/font.png" />  
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/script.js"></script> 
+	<title>Home</title>
+  </head>
+  <body>
+  	<header>
+  		<nav class="navbar navbar-default "style="background-color: #0747a6;" >
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+			     <a class="navbar-brand" href="home.html">ECL Educational Project</a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="myNavbar">
+			      <ul class="nav navbar-nav">
+			        
+			        <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Educational Materials<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a class="dropdown-item" onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" target="_blank">Class I</a> </li>
+			            <li><a class="dropdown-item" onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" target="_blank">Class II</a></li>
+			            <li><a class="dropdown-item" onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" target="_blank">Class III</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Important Links<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="http://www.nctb.gov.bd/" target="_blank">www.nctb.gov.bd</a></li>
+			            <li><a href="http://www.moedu.gov.bd/" target="_blank">www.moedu.gov.bd</a></li>
+			          </ul>
+			        </li>
+			        <li><a href="reg.html">Registration</a></li>
+			        
+			        <li><a href="student's_list.html">Students List</a></li>
+			        
+			       <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="attendance_sheet.html">Take Attendance</a></li>
+						<li><a href="attendance_retrieve.html">Check Attendance</a></li>       
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Result List<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="explicit_mark_sheet.html">Explicit Mark Sheet</a></li>
+			            <li><a href="mid_term_result_sheet_list.html">Mid Term</a></li>
+			            <li><a href="semester_final_result_sheet_list.html">Semester Final</a></li>
+			            <li><a href="total_mark_sheet.html">Total Result</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+			      	<li >
+			      		 <form  onsubmit="return error()" method="post" class="form-inline" style="margin-top: 8px; height: 30px; border-radius: 5px;width:80%; margin-left:10px;" >
+			      			<input class="form-control form-control-sm" type="text/submit" name="student_name" placeholder="Search Information" aria-label="Search"style="border-radius: 2px;">
+			      		</form>			      			
+			      					 
+				    </li>
+			        <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+			        <li><a href="#"><span class="glyphicon glyphicon-user" ></span></a></li>
+			        <li><a href="login_page.html"><span class="glyphicon glyphicon-log-out"></span></a></li>
+			      </ul>
+			    </div>
+			  </div>
+			</nav>
+	</header> 
+<div class="container" style="background-color: #fff;border-radius: 2px; margin-bottom:30px;">
+			<div class="container" style="background-color: #f4f5f7">
+				<div class="row">				
+			        <div class="col-xs-12 col-sm-12 col-md-4">
+			            <div class="panel" style="padding:10px; height:220px; overflow-y: scroll;">
+			                <div class="panel-heading" style="background-color: #0747a6;">
+			                    <h3 class="panel-title" style="color: #ffffff;">
+									Notice Board</h3>
+			                    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+			                </div>
+			                <div class="panel-body">
+			                    <ul>
+			                    	<li><a href="notice.html">15th August,the day of national mourning</a></li>
+			                    	<li><a href="notice.html">Final Exam's Routine 2018</a></li>
+			                    	<li><a href="notice.html">Behaviour Code</a></li>
+			                    				                    	
+			                    </ul>
+			                  <button onclick="window.location.replace('notice.html');"  class="btn btn-info text-center pull-right"style="background-color: #0747a6;" >More</button>
+			                    			                    
+			                </div>
+			            </div>
+			        </div>
+			        <div class="col-xs-12 col-sm-12 col-md-4">
+			            <div class="panel " style="padding:10px; height:220px; overflow-y: scroll;">
+			                <div class="panel-heading" style="background-color: #0747a6;">
+			                    <h3 class="panel-title" style="color: #ffffff;">
+			                        Upcoming Assignments & Quizes</h3>
+			                    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+			                </div>
+			                <div class="panel-body">
+			                	<ul>		                    	
+			                    	<li><a href="assignment.html">Math Quiz Test on 12th August</a></li>
+			                    	<li><a href="assignment.html">Logic Test on 13th August</a></li>
+			                    	<li><a href="assignment.html">Spelling Test on 14th August</a></li>
+			                    	<li><a href="assignment.html">Vocabulary Quiz Test on 16th August</li>
+			                    </ul>
+			                    <button onclick="window.location.replace('assignment.html');" class="btn btn-info text-center pull-right"style="background-color: #0747a6;" >More</button>		                    
+			                </div>
+			            </div>
+			        </div>
+			        
+			        <div class="col-xs-12 col-sm-12 col-md-4">
+			            <div class="panel " style="padding:10px; height:220px;">
+			                <div class="panel-heading" style="background-color: #0747a6;">
+			                    <h3 class="panel-title" style="color: #ffffff;">
+									Contents</h3>
+			                    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+			                </div>
+			                <div class="panel-body">
+			                	<ul >
+						            <li><a href="assets/content/class_1/intro_class1.html"  target="_blank">Class I</a> </li>
+						            <li><a href="assets/content/class_2/intro_class2.html"  target="_blank">Class II</a></li>
+						            <li><a href="assets/content/class_3/intro_class3.html" target="_blank">Class III</a></li>
+									<!-- onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" -->
+						          </ul>						       		                    
+			                </div>
+			            </div>
+			        </div>
+				</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<div class="container" style="background-color: #f4f5f7;border-radius: 2px;" >
+				<div class="row">
+		        <div class="col-xs-12 col-sm-12 col-md-12 ">
+		            <div class="panel panel-info" style="padding:10px;overflow-y: scroll;">
+		                <div class="panel-heading" style="background-color: #0747a6;">
+		                    <h3 class="panel-title" style="color: #ffffff;">
+		                        Students Activities </h3>
+		                    <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+		                </div>
+		                <div class="panel-body">
+		                	<ul>
+		                    	<li><a href="activity.html">Science Fair 2018</a></li>
+		                    	<li><a href="activity.html">Students participated in the Annual Rover Scouting.</a></li>
+		                    	<li><a href="activity.html">Student Of our school aarded in Inter School Debate Competition</a></li>            	
+		                    </ul>
+		                     <button onclick="window.location.replace('activity.html');" class="btn btn-info text-center pull-right"style="background-color: #0747a6;" >More</button>
+		                </div>
+		            </div>
+		        </div>		        
+		    </div>
+			</div>
+    </div>
+    <footer class="page-footer font-small blue" style="position: fixed; left: 0; bottom: 0; width: 100%; background-color:#0747a6; color: white; text-align: center;margin-top:20px;">
+		<div class="footer-copyright text-center py-3">
+    		&copy Copyright 2018 | <a href="http://www.ecl-bd.com/" target="blank" style="color: #fff">ECL | Version-1</a>
+    	</div>
+	</footer>
+<script type="text/javascript">
+				function error(){
+					alert("This feature will get provided only if database and application container exist!!!");
+				}
+
+			</script>
+  </body>
+</html>

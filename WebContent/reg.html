@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en"
+		xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/font.png" /> 
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/script.js"></script> 
+	<title>Registration</title>
+  </head>
+  <body>
+  	<header>
+  		<nav class="navbar navbar-default "style="background-color: #0747a6;" >
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+			     <a class="navbar-brand" href="home.html">ECL Educational Project</a>
+			    </div>
+			    <div class="collapse navbar-collapse" id="myNavbar">
+			      <ul class="nav navbar-nav">
+			        
+			        <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Educational Materials<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a class="dropdown-item" onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" target="_blank">Class I</a> </li>
+			            <li><a class="dropdown-item" onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" target="_blank">Class II</a></li>
+			            <li><a class="dropdown-item" onclick="alert('This Content is &copy copyrighted and provided by our licensed partner');" target="_blank">Class III</a></li>
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Important Links<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="http://www.nctb.gov.bd/" target="_blank">www.nctb.gov.bd</a></li>
+			            <li><a href="http://www.moedu.gov.bd/" target="_blank">www.moedu.gov.bd</a></li>
+			          </ul>
+			        </li>
+			        <li><a href="reg.html">Registration</a></li>
+			        
+			        <li><a href="student's_list.html">Students List</a></li>
+			        
+			       <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="attendance_sheet.html">Take Attendance</a></li>
+						<li><a href="attendance_retrieve.html">Check Attendance</a></li>       
+			          </ul>
+			        </li>
+			        <li class="dropdown">
+			          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Result List<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="explicit_mark_sheet.html">Explicit Mark Sheet</a></li>
+			            <li><a href="mid_term_result_sheet_list.html">Mid Term</a></li>
+			            <li><a href="semester_final_result_sheet_list.html">Semester Final</a></li>
+			            <li><a href="total_mark_sheet.html">Total Result</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+			      	<li >
+			      		 <form  onsubmit="return error()" method="post" class="form-inline" style="margin-top: 8px; height: 30px; border-radius: 5px;width:80%; margin-left:10px;" >
+			      			<input class="form-control form-control-sm" type="text/submit" name="student_name" placeholder="Search Information" aria-label="Search"style="border-radius: 2px;">
+			      		</form>					 
+				    </li>
+			        <li><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
+			        <li><a href="#"><span class="glyphicon glyphicon-user" ></span></a></li>
+			        <li><a href="login_page.html"><span class="glyphicon glyphicon-log-out"></span></a></li>
+			      </ul>
+
+			    </div>
+			  </div>
+			</nav>
+	</header> 
+<div class="container" style="margin-top:30px; margin-bottom:40px;">
+<div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-default">
+	  <div class="panel-heading"><h3 class="panel-title">					
+	  	<strong>Registration</strong></h3>
+	  </div>
+  
+  <div class="panel-body" style="background-color:#e8ebf2;">
+  
+   <form   onSubmit="return reg()" method="GET">
+   <input type="hidden" name="command" value="STUDENT_REGISTRATION_CLASS_1" /> 
+            <div class="row">
+    			<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_f_n">First Name:<font color="red">*</font></label>						
+                        <input type="text" class="form-control" onblur="check_validity(this.id)" id="student_first_name" name="student_f_n" placeholder="" required tabindex="1">
+					</div>
+				</div>
+                <div class="col-xs-12 col-sm-4 col-md-4">
+    				<div class="form-group">
+	    				<label for="student_m_n">Middle Name:</label>
+	    				<input type="text" class="form-control" onblur="check_validity(this.id)" id="student_middle_name" name="student_m_n" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_l_n">Last Name:<font color="red">*</font></label>
+						<input type="text" class="form-control" onblur="check_validity(this.id)" id="student_last_name" name="student_l_n" required  tabindex="2">
+					</div>
+				</div>
+			</div>	
+				
+			<div class="row">
+    			<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<label for="student_father_name">Father Name:<font color="red">*</font></label>
+						<input type="text" class="form-control" id="name_of_student_father" name="student_father_name" required>						
+					</div>
+				</div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
+    				<div class="form-group">
+	    				<label for="s_mother_name">Mother Name:<font color="red">*</font></label>
+						<input type="text" class="form-control" id="name_of_student_mother" name="student_mother_name" required>
+					</div>
+				</div>
+			</div>
+			
+				
+			<div class="row">
+				
+    			<div class="col-xs-6 col-sm-6 col-md-4">
+					<div class="form-group">
+						<label for="student_gender">Gender<font color="red">*</font></label>
+						<br>
+						<div class="input-group">		
+						<select id="gender_of_student" name="student_gender" class="form-control input-md" style="border-radius: 5px;" required>
+							<option value="">Select Gender</option>
+							<option value="M">Male</option>
+							<option value="F">Female</option>
+						</select>
+						</div>
+					</div>						
+				</div>	
+					
+                <div class="col-xs-6 col-sm-6 col-md-4">
+    				<div class="form-group">
+    				<label for="student_religion">Religion<font color="red">*</font></label>	
+    				<br>
+					 	<div class="input-group">				 		
+						<select id="student_religion" name="student_religion" class="form-control input-md" style="border-radius: 5px;" required>
+							<option value="">Select Religion</option>
+							<option value="Islam">Islam</option>
+							<option value="Hindu">Hindu</option>
+							<option value="Cristian">Christian</option>
+							<option value="Buddho">Buddhist</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+				</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4">
+					<div class="form-group">
+						<label for="student_blood_group">Blood Group</label>
+						<input type="text" class="form-control" id="student_blood_group" name="student_blood_group" placeholder="Ex:A+">
+					</div>
+				</div>				
+			</div>		
+						
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_birth_date">Birth Date<font color="red">*</font></label>
+						<input type="date" class="form-control" id="student_birthdate" name="student_birth_date" placeholder="yyyy/mm/dd" required  tabindex="5">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_contact_no">Parent Contact No:<font color="red">*</font></label>
+						<input type="text" class="form-control" id="contact_no_student" name="student_contact_no" placeholder="+8801XXXXXXXXX" required tabindex="6">
+
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_birth_certificate_no">Birth Certificate No:<font color="red">*</font></label>
+						<input type="number" class="form-control" id="student_birth_certificate_no" name="student_birth_certificate_no" placeholder="12XXXXXXXXXXXXXXX"  tabindex="3" required>
+					</div>
+				</div>
+			</div>
+			
+		
+			<div class="row">
+				
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_class">Class<font color="red">*</font></label>
+						<input type="number" class="form-control" id="class_of_student" name="student_class" placeholder="Ex:1" required>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_roll_no">Roll<font color="red">*</font></label>
+						<input type="number" class="form-control" id="student_roll" name="student_roll_no" placeholder="" required>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+						<label for="student_nationality">Nationality<font color="red">*</font></label>
+						<input type="text" class="form-control" onblur="check_validity(this.id)" id="student_nationality" name="student_nationality" placeholder="Bangladeshi" required>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<label for="student_temporary_address">Temporary Address<font color="red">*</font></label>
+						<input type="text" class="form-control" id="student_temporary_address" name="student_temporary_address" placeholder="" required>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<label for="student_permanent_address">Permanent Address</label>
+						<input type="text" class="form-control" id="student_permanent_address" name="student_permanent_address">
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12">
+					<div class="form-group">
+						<label for="pp">Profile Picture</label>
+						<input name="imageee" id="file" type='file' onchange=" if(this.files[0].size > 50000){alert('File is too big!');this.value = '';}else{checkFileDetails(this);}"
+									accept="image/*" style="margin-top: 7px;"><font color="red">*Image size must be 300x300 and not more than!!</font>
+					</div>
+				</div>
+			</div>
+			<hr>
+			
+			<div class="col-md-12 text-center">
+				  <button type="submit" class="btn btn-primary btn-md text-center">submit</button>
+				  
+			</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+	//image validation check
+	function checkFileDetails(input) {
+		var fi = document.getElementById('file');
+
+		for (var i = 0; i <= fi.files.length - 1; i++) {
+			readImageFile(fi.files.item(i)); // GET IMAGE INFO USING fileReader().
+		}
+
+		// GET THE IMAGE WIDTH AND HEIGHT USING fileReader() API.
+		function readImageFile(file) {
+			var reader = new FileReader(); // CREATE AN NEW INSTANCE.
+			reader.onload = function(e) {
+				var img = new Image();
+				img.src = e.target.result;
+
+				img.onload = function() {
+					var w = this.width;
+					var h = this.height;
+
+					if (w == 300 && h == 300) {
+						if (input.files && input.files[0]) {
+							var reader = new FileReader();
+							reader.onload = function(e) {
+
+							};
+
+							reader.readAsDataURL(input.files[0]);
+						}
+					} else {
+						alert('the image has to be 300*300');
+					}
+				}
+			};
+			reader.readAsDataURL(file);
+		}
+
+	}
+
+	//checking if there is any special characters or numbers in a input text
+	function check_validity(input) {
+		var name = document.getElementById(input).value;
+		var name_array = name.split("");
+		for (var i = 0; i < name_array.length; i++) {
+			if (isNaN(name_array[i])) {
+				var splChars = "*|,\":<>[]{}`\';()@&$#%+-*%!~^_=";
+				var splchar_array = splChars.split("");
+				for (var j = 0; j < splchar_array.length; j++) {
+					if (name_array[i] == splchar_array[j]) {
+						alert('Enter only characters!');
+						break;
+					}
+				}
+			} else {
+				alert('Enter only characters!');
+			}
+		}
+	}
+
+	//checking whether the entered roll already exist or not
+	$(function() {
+		$("#student_roll").blur(function() {
+			var roll = parseInt(document.getElementById("student_roll").value);
+			$.get("Registration_Controller_Servlet", {
+				command : "Checking_Roll",
+				input_roll : roll
+
+			}, function(data) {
+				if (data == "The roll is already exist.Enter a new one.") {
+					alert(data);
+				}
+
+			});
+		});
+	});
+
+	function reg() {alert("This feature will get provided only if database and application container exist!!!");}
+	function error(){alert("This feature will get provided only if database and application container exist!!!");}
+
+			</script>	
+</script>
+<footer class="page-footer font-small blue" style="position: fixed; left: 0; bottom: 0; width: 100%; background-color:#0747a6; color: white; text-align: center;margin-top:20px;">
+		<div class="footer-copyright text-center py-3">
+    		&copy Copyright 2018 | <a href="http://www.ecl-bd.com/" target="blank" style="color: #fff">ECL | Version-1</a></div>
+</footer>
+
+</body>
+</html>
