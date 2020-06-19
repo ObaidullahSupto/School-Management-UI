@@ -3,8 +3,8 @@ To start the software, click on the incon named "Everest Classroom and School Ma
 
 Use the following to login:
 
-Username: ecl
-Password: ecl
+Username: admin
+Password: admin
 
 To see the features of the software, please follow the included User Guide.
 Some features of the software require a database and server conncetion so they are temporarily disabled for the purposes of this demo.
